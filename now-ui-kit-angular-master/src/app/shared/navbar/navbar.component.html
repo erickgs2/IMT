@@ -22,7 +22,8 @@
         <div class="navbar-translate">
             <a class="navbar-brand"  placement="bottom" ngbTooltip="Industria Metalica de Transformación">
             <!-- <a class="navbar-brand" [routerLink]="['/index']" placement="bottom" ngbTooltip="Designed by Invision. Coded by Creative Tim"> -->
-                IMT
+                <!-- IMT -->
+                <img class="n-logo" style="max-width: 100px;"  src="assets/img/IMT.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar bar1"></span>
@@ -38,18 +39,31 @@
                       <p>Download</p>
                   </a>
               </li> -->
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="https://creativetimofficial.github.io/now-ui-kit-angular/documentation/tutorial" target="_blank">
-                      <i class="now-ui-icons files_paper"></i>
-                      <p>Documentation</p>
-                    </a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link btn btn-neutral" href="#Contacto" target="_self">
-                        <!-- <i class="now-ui-icons arrows-1_share-66"></i> -->
+              <li class="nav-item">
+                  <a class="nav-link"  [routerLink]="['/inicio']"  target="_self">
+                    <p>Inicio</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  [routerLink]="['/nosotros']"  target="_self">
+                    <p>Nosotros</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  [routerLink]="['/productos']"  target="_self">
+                    <p>Productos</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  [routerLink]="['/contacto']"  target="_self">
+                    <p>Contacto</p>
+                  </a>
+              </li>
+              <!-- <li class="nav-item">
+                    <a class="nav-link btn btn-neutral" href="./contacto" target="_self">
                         <p><strong>Contactanos</strong></p>
                     </a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                   <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
                     <i class="fab fa-twitter"></i>

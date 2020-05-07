@@ -1,0 +1,157 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/back2.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <!-- <h3 class="">Industria Metalica de Transformación</h3> -->
+                <h1 style="font-size: 40px" class="title">Transforma, maneja y mecaniza tus procesos agrícolas.</h1>
+                <div class="text-center">
+                    <a href="https://www.facebook.com/pages/Industria-Metalica-de-Transformacion-SA-de-CV/981432678604297"
+                        class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <!-- <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                    <i class="fab fa-google-plus"></i>
+                  </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section section-contact-us text-center" style="padding:0px; " id=¨Contacto¨>
+        <div class="" style="max-width: none; padding: 0;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.494863203729!2d-101.99743558507842!3d20.362476286363005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDIxJzQ0LjkiTiAxMDHCsDU5JzQyLjkiVw!5e0!3m2!1sen!2smx!4v1585939491680!5m2!1sen!2smx"
+                onload="this.width=screen.width - 20" height="450" frameborder="0" style="border:0;"
+                allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <div class="section section-contact-us text-center" id=¨Contacto¨>
+        <div class="container">
+            <div class="row justify-content-md-center sharing-area text-center">
+                <div class="text-center col-md-12 col-lg-8">
+                    <a target="_blank" href="https://www.facebook.com/creativetim"
+                        class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+
+                </div>
+            </div>
+            <h2 class="title">Contactanos</h2>
+            <p style="font-size: 18px;">Haznos saber tus comentarios o cotiza algun servicio o producto directamente con
+                nosotros.</p>
+            <div class="row">
+                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                    <form id="my-form" action="https://formspree.io/xpzjznqq" method="POST">
+                        <h4 style="text-align: left; padding: 0 40px;">Nombre</h4>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons users_circle-08"></i>
+                                </span>
+                            </div>
+                            <input name="name" type="text" required class="form-control" placeholder="Juan Perez"
+                                (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <h4 style="text-align: left; padding: 0 40px;">Telefono</h4>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons tech_mobile"></i>
+                                </span>
+                            </div>
+                            <input name="phone" required class="form-control" placeholder="(352) 123 45 67"
+                                (focus)="focus1=true" (blur)="focus1=false" type="tel"
+                                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                        </div>
+                        <h4 style="text-align: left; padding: 0 40px;">Correo</h4>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus2===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons ui-1_email-85"></i>
+                                </span>
+                            </div>
+                            <input type="email" name="_replyto" required class="form-control"
+                                placeholder="juan@correo.com" (focus)="focus2=true" (blur)="focus2=false">
+                        </div>
+                        <h4 style="text-align: left; padding: 0 40px;">Motivo</h4>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus3===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons ui-2_chat-round"></i>
+                                </span>
+                            </div>
+                            <select name="type" id="type" form="my-form" class="form-control"
+                                style="height: calc(2.25rem + 11px);" (blur)="focus3=false" (focus)="focus3=true">
+                                <option value="" selected disabled hidden>Seleccione un motivo</option>
+                                <option>Cotización</option>
+                                <option>Refacciones</option>
+                                <option>Dudas o comentatios</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="textarea-container">
+                            <textarea class="form-control" required name="body" rows="4" cols="80"
+                                placeholder="Estoy interesado en cotizar con ustedes..."></textarea>
+                        </div>
+                        <div class="send-button">
+                            <button id="my-form-button" class="btn btn-primary btn-round btn-block btn-lg">
+                                Enviar
+                            </button>
+                            <p id="my-form-status"></p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-default" style="background-color: #2c2c2c;" data-background-color="black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 ml-auto mr-auto">
+                    <ul style="display:block">
+                        <li style="display:block">
+                            <strong>INDUSTRIA METALICA DE TRANSFORMACION S.A. DE C.V.</strong>
+
+                        </li>
+                        <li style="display:block">
+                            Antiguo Camino a la Estación S/N, Santa Ana Pacueco, Guanajuato.
+                        </li>
+                        <li style="display:block">
+                            Lunes a Viernes 8:00 a 14:00 y 15:30 a 18:00; Sábado 8:00 a 13:30
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 ml-auto mr-auto">
+                    <ul style="display:block">
+
+                        <li style="display:block">
+                            <strong>Teléfono:</strong> (352) 526-50-41
+                        </li>
+                        <li style="display:block">
+                            <strong>Correo electrónico de cotización / contacto:</strong> imt.ventasgto@gmail.com
+                        </li>
+                        <!-- <li style="display:block">
+                            <strong>Correo electrónico de cotización:</strong> imt.ventasgto@gmail.com
+                        </li> -->
+                    </ul>
+
+                    <!-- &copy;
+                {{data | date: 'yyyy'}}, Designed and co
+                <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>. -->
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

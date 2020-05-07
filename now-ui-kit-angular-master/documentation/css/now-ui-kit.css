@@ -5068,7 +5068,7 @@ p {
 }
 
 .text-primary {
-    color: #f96332 !important;
+    color: rgb(240, 76, 8)!important;
 }
 
 .text-info {
@@ -5580,7 +5580,7 @@ body {
 }
 
 .bg-primary {
-    background-color: #f96332 !important;
+    background-color: rgb(240, 76, 8) !important;
 }
 
 .bg-info {
@@ -9651,13 +9651,13 @@ Created using IcoMoon - icomoon.io
 .page-header[filter-color="orange"] {
     background: rgba(44, 44, 44, 0.2);
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
     /* Standard syntax */
 }
 
@@ -10844,10 +10844,10 @@ Created using IcoMoon - icomoon.io
     }
     .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
-        background: -webkit-linear-gradient(#f96332 0%, #000 80%);
-        background: -o-linear-gradient(#f96332 0%, #000 80%);
-        background: -moz-linear-gradient(#f96332 0%, #000 80%);
-        background: linear-gradient(#f96332 0%, #000 80%);
+        background: -webkit-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -o-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -moz-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: linear-gradient(rgb(240, 76, 8)0%, #000 80%);
     }
     .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
@@ -11417,10 +11417,10 @@ Created using IcoMoon - icomoon.io
     }
     .burger-menu .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
-        background: -webkit-linear-gradient(#f96332 0%, #000 80%);
-        background: -o-linear-gradient(#f96332 0%, #000 80%);
-        background: -moz-linear-gradient(#f96332 0%, #000 80%);
-        background: linear-gradient(#f96332 0%, #000 80%);
+        background: -webkit-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -o-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -moz-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: linear-gradient(rgb(240, 76, 8)0%, #000 80%);
     }
     .burger-menu .navbar-collapse[data-color="red"]:after {
         background: #FF3636;

@@ -9,11 +9,19 @@ import { ExamplesModule } from './examples/examples.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        InicioComponent,
+        ContactoComponent,
+        NosotrosComponent,
+        ProductosComponent
     ],
     imports: [
         BrowserAnimationsModule,
