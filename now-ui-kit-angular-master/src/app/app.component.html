@@ -1,2 +1,70 @@
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="wrapper">
+
+    <router-outlet></router-outlet>
+    <footer class="footer footer-default" style="background-color: #2c2c2c;" data-background-color="black">
+        <div class="container" style="padding:65px 0">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 ml-auto mr-auto">
+                    <h4 style="font-family: 'Moon';color: #ee4b08; margin: 2px 0px;">Nosotros</h4>
+                    <div class="separator separator-primary" style="margin-top: 0px; 
+                    margin-left:0px;
+                    width: 60%;
+                    border: solid 2px #fff;"></div>
+                    <ul style="display:block">
+
+                        <li style="display:block">
+                            <strong>INDUSTRIA METALICA DE TRANSFORMACION S.A. DE C.V.</strong>
+
+                        </li>
+                        <li style="display:block">
+                            Antiguo Camino a la Estación S/N, Santa Ana Pacueco, Guanajuato.
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <div class="col-lg-4 col-md-4 ml-auto mr-auto">
+                    <h4 style="font-family: 'Moon';color: #ee4b08; margin: 2px 0px;">Productos IMT</h4>
+                    <div class="separator separator-primary" style="margin-top: 0px; 
+                    margin-left:0px;
+                    width: 60%;
+                    border: solid 2px #fff;"></div>
+                    <ul style="display:block">
+                        <li *ngFor="let item of prodTypes"  style="display:block;">
+                            <a style="display:block; padding: 0px ">{{item.name}}</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 ml-auto mr-auto">
+                    <h4 style="font-family: 'Moon';color: #ee4b08; margin: 2px 0px;">Contacto</h4>
+                    <div class="separator separator-primary" style="margin-top: 0px; 
+                    margin-left:0px;
+                    width: 60%;
+                    border: solid 2px #fff;"></div>
+                    <ul style="display:block">
+
+                        <li style="display:block">
+                            Lunes a Viernes 8:00 a 14:00 y 15:30 a 18:00; Sábado 8:00 a 13:30
+                        </li>
+                        <li style="display:block">
+                            <br>
+                        </li>
+                        <li style="display:block">
+                            <strong style="color: #ee4b08;">Teléfono:</strong> (352) 526-50-41
+                        </li>
+                        <li style="display:block">
+                            <strong style="color: #ee4b08;">Correo electrónico de cotización / contacto:</strong>
+                            imt.ventasgto@gmail.com
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

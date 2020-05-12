@@ -42,6 +42,7 @@ export class InicioComponent implements OnInit, OnDestroy  {
   }
 
   ngOnInit() {
+    window.scroll(0,0);
     var rellaxHeader = new Rellax('.rellax-header');
 
       var navbar = document.getElementsByTagName('nav')[0];

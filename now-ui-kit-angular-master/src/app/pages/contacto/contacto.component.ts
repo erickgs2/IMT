@@ -18,6 +18,7 @@ export class ContactoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.scroll(0,0);
     var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];

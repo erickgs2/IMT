@@ -13,6 +13,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes =[
     { path: 'inicio',               component: InicioComponent },
     { path: 'nosotros',             component: NosotrosComponent },
     { path: 'productos',            component: ProductosComponent },
+    { path: 'producto/:id',         component: ProductoComponent },
     { path: 'contacto',             component: ContactoComponent },
     // { path: 'index',                component: ComponentsComponent },
     // { path: 'nucleoicons',          component: NucleoiconsComponent },

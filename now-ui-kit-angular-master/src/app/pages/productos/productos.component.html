@@ -1,4 +1,4 @@
-<div class="wrapper">
+
     <div class="page-header page-header-small">
         <div class="page-header-image rellax-header" data-rellax-speed="-8"
             style="background-image: url('assets/img/back2.jpg');">
@@ -6,7 +6,7 @@
         <div class="container">
             <div class="content-center">
                 <!-- <h3 class="">Industria Metalica de Transformación</h3> -->
-                <h1 class="title" style="font-size: 40px">Transforma, maneja y mecaniza tus procesos agrícolas.</h1>
+                <h1 class="title" style="font-size: 40px">Transforma, maneja y mecaniza tus procesos agrícolas</h1>
                 <div class="text-center">
                     <a href="https://www.facebook.com/pages/Industria-Metalica-de-Transformacion-SA-de-CV/981432678604297"
                         class="btn btn-primary btn-icon btn-round">
@@ -30,11 +30,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-left">
-                    <h2 class="title seccionTitleProducts" >Productos IMT</h2>
+                    <h2 class="title seccionTitleProducts" >Productos <strong style="color:#ee4b08">IMT</strong></h2>
+                    <h4 class="title seccionTextProducts" >Nuestros productos y servicios son desarrollados especialmente para el sector agrícola y ganadero, contamos con una alta variedad y precios accesibles.</h4>
                     <div class="separator separator-primary" style="margin-top: 0px; 
                     margin-left:0px;
+                    margin-bottom: 90px;
                     width: 395px;
-                    border: solid 2px #f04c08;"></div>
+                    border: solid 2px #ee4b08;"></div>
 
                 </div>
             </div>
@@ -44,9 +46,14 @@
 
 
             <div class="row">
-                <div *ngFor="let item of prodTypes" class="col-md-4">
-                    <img src="assets/img/re1.png">
-                    <h2 class="title title-prod" >{{item}}</h2>
+                <div *ngFor="let item of prodTypes" (click)="goToProductDetails(item.name)" style="margin-bottom:30px" class="col-md-4">
+                    <img style="height: 250px;" [src]="item.img">
+                    <div class="separator separator-primary" style="margin-top: 0px; 
+                    margin-bottom: 8px;
+                    margin-left:0px;
+                    width: 60%;
+                    border: solid 2px #f04c08;"></div>
+                    <h2 class="title title-prod" >{{item.name}}</h2>
                     <!-- <div class="separator separator-primary" style="margin-top: 0px; 
                     margin-left:0px;
                     width: 60%;
@@ -79,44 +86,4 @@
 
 
 
-    <footer class="footer footer-default" style="background-color: #2c2c2c;" data-background-color="black">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 ml-auto mr-auto">
-                    <ul style="display:block">
-                        <li style="display:block">
-                            <strong>INDUSTRIA METALICA DE TRANSFORMACION S.A. DE C.V.</strong>
 
-                        </li>
-                        <li style="display:block">
-                            Antiguo Camino a la Estación S/N, Santa Ana Pacueco, Guanajuato.
-                        </li>
-                        <li style="display:block">
-                            Lunes a Viernes 8:00 a 14:00 y 15:30 a 18:00; Sábado 8:00 a 13:30
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-6 ml-auto mr-auto">
-                    <ul style="display:block">
-
-                        <li style="display:block">
-                            <strong>Teléfono:</strong> (352) 526-50-41
-                        </li>
-                        <li style="display:block">
-                            <strong>Correo electrónico de cotización / contacto:</strong> imt.ventasgto@gmail.com
-                        </li>
-                        <!-- <li style="display:block">
-                            <strong>Correo electrónico de cotización:</strong> imt.ventasgto@gmail.com
-                        </li> -->
-                    </ul>
-
-                    <!-- &copy;
-                {{data | date: 'yyyy'}}, Designed and co
-                <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>. -->
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>

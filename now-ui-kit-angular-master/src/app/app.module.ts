@@ -13,6 +13,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ProductosComponent } from './pages/productos/productos.component';
         InicioComponent,
         ContactoComponent,
         NosotrosComponent,
-        ProductosComponent
+        ProductosComponent,
+        ProductoComponent
     ],
     imports: [
         BrowserAnimationsModule,

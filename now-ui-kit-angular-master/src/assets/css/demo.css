@@ -20,20 +20,129 @@
 
 */
 
+.model-area-prod-desc {
+    position: relative;
+    top: 385px;
+    margin-left: -225px;
+    z-index: 99999;
+}
+.hidden{
+    display: none !important;
+}
+.sidebar-collapse .navbar-collapse{
+    background-color: transparent !important;
+}
+.sidebar-collapse .navbar-collapse::before {
+    background: linear-gradient(#fff 0%, #000 80%) !important;
+
+}
+.sidebar-collapse .toggled .bar1{
+    top: 10px !important;
+}
+.sidebar-collapse .navbar .navbar-toggler-bar{
+    height: 3px !important;
+}
+@media only screen and (max-width: 1200px) {
+    .model-area-prod-desc {
+        position: relative;
+        top: 325px;
+        margin-left: -225px;
+        z-index: 99999;
+    }
+
+  }
+@media only screen and (max-width: 990px) {
+    .model-area-prod-desc {
+        position: relative;
+        top: 215px;
+        margin-left: -225px;
+        z-index: 99999;
+    }
+    .model-area-prod-desc>h2 {
+        font-size: 75px !important;
+
+    }
+    .sidebar-collapse .navbar .navbar-nav{
+        font-family: 'Moon';
+        font-size: 45px;
+    }
+    .sidebar-collapse .navbar .navbar-nav>li>a{
+        color: #2c2c2c !important;
+    }
+    .navbar .navbar-nav .nav-link:not(.btn) i.fab, .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons{
+        top: -5px !important;
+    }
+    .facebook-nav{
+        position: absolute;
+        bottom: 0px;
+        
+    }
+    .facebook-nav>a>i{
+        color: #fff;
+    }
+    .facebook-nav>a>p{
+        color: #f04c08;
+    }
+    .footer.footer-default{
+        padding: 0px 20px !important;
+    }
+  }
+@media only screen and (max-width: 768px) {
+    .model-area-prod-desc {
+        position: absolute;
+        top: -50px;
+        margin-left: 0px;
+        z-index: 99999;
+    }
+    .mini-img-prod-desc{
+        height: auto !important;
+        width: 59%; 
+    }
+    .model-area-prod-desc>h2 {
+        font-size: 75px !important;
+
+    }
+    .img-prod-desc{
+        margin: 0px !important;
+    }
+    .mini-img-prod-separator{
+        margin: auto !important;
+        text-align: center !important;
+        width: 50% !important;
+    }
+
+
+  }
+
+.page-header .title{
+
+    font-family: 'Moon', sans-serif;
+    text-align: left;
+    font-size: 45px !important;
+}
 .title-prod{
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-family: 'Moon', sans-serif;
+    font-size: 28px;
     color: #2c2c2c;
     font-weight: 900;
     margin-bottom: 10px;
     height: 65px;
 }
 .seccionTitleProducts{
-    font-family: 'Anton', sans-serif;
-    font-size: 52px;
+    font-family: 'Moon', sans-serif;
+    font-size: 73px;
     color: #2c2c2c;
-    font-weight: 199;
+    font-weight: 900;
     margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+.seccionTextProducts{
+    font-family: 'Moon', sans-serif;
+    font-size: 20px;
+    color: #2c2c2c;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 .tim-row {
@@ -71,6 +180,7 @@
 }
 
 .tim-row h3 {
+
     margin-top: 0;
 }
 

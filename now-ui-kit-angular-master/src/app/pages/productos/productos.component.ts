@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Rellax from 'rellax';
 import { ProductsService } from '../../services/products.service'
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productos',
@@ -19,9 +21,13 @@ export class ProductosComponent implements OnInit {
   prodTypes = [];
 
 
-  constructor(public restApi: ProductsService) { }
+
+  constructor(public restApi: ProductsService,
+    private _sanitizer: DomSanitizer,
+    private router: Router) { }
 
   ngOnInit() {
+    window.scroll(0,0);
     var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
@@ -35,21 +41,44 @@ export class ProductosComponent implements OnInit {
         this.products.push({
             "type":data['Items'][i]["product_type"]["S"],
             "model":data['Items'][i]["product_model"]["S"],
-            "img":data['Items'][i]["product_img"]["S"],
+            "img":this._sanitizer.bypassSecurityTrustUrl(data['Items'][i]["product_img"]["S"]),
             "desc":data['Items'][i]["product_desc"]["S"],
             "name":data['Items'][i]["product_name"]["S"]
           })
 
-          var validator = this.prodTypes.find(element => element == this.products[i].type);
+          var validator = this.prodTypes.find(element => element.name == this.products[i].type);
           if( validator == null || undefined){
-            this.prodTypes.push(this.products[i].type);
+            this.prodTypes.push(
+              {
+                "name":this.products[i].type,
+                "img":this.products[i].img
+              }
+            );
           }
           
       }
-      
+      this.prodTypes = this.prodTypes.sort(this.compare)
       
     })
 
+  }
+
+  goToProductDetails(id) {
+    this.router.navigate(['/producto', id]);
+  }
+
+  compare(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const bandA = a.name.toUpperCase();
+    const bandB = b.name.toUpperCase();
+  
+    let comparison = 0;
+    if (bandA > bandB) {
+      comparison = 1;
+    } else if (bandA < bandB) {
+      comparison = -1;
+    }
+    return comparison;
   }
   ngOnDestroy(){
     var body = document.getElementsByTagName('body')[0];

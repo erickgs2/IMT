@@ -5068,7 +5068,7 @@ p {
 }
 
 .text-primary {
-    color: rgb(240, 76, 8)!important;
+    color: rgb(28,78,159)!important;
 }
 
 .text-info {
@@ -5580,7 +5580,7 @@ body {
 }
 
 .bg-primary {
-    background-color: rgb(240, 76, 8) !important;
+    background-color: #ee4b08  !important;
 }
 
 .bg-info {
@@ -6245,6 +6245,14 @@ Created using IcoMoon - icomoon.io
     font-family: 'Nucleo Outline';
     src: url("../fonts/nucleo-outline.eot");
     src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype"), url("../fonts/nucleo-outline.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Moon';
+    src:url('../fonts/moon.woff2') format('woff2'),
+    url('../fonts/moon.woff') format('woff'),
+    url('../fonts/moon.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -9651,13 +9659,13 @@ Created using IcoMoon - icomoon.io
 .page-header[filter-color="orange"] {
     background: rgba(44, 44, 44, 0.2);
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
+    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(28,78,159, 0.6));
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
+    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(28,78,159, 0.6));
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
+    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(28,78,159, 0.6));
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(240, 76, 8, 0.6));
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(28,78,159, 0.6));
     /* Standard syntax */
 }
 
@@ -10844,10 +10852,10 @@ Created using IcoMoon - icomoon.io
     }
     .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
-        background: -webkit-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: -o-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: -moz-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -webkit-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: -o-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: -moz-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: linear-gradient(rgb(28,78,159)0%, #000 80%);
     }
     .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
@@ -11417,10 +11425,10 @@ Created using IcoMoon - icomoon.io
     }
     .burger-menu .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
-        background: -webkit-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: -o-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: -moz-linear-gradient(rgb(240, 76, 8)0%, #000 80%);
-        background: linear-gradient(rgb(240, 76, 8)0%, #000 80%);
+        background: -webkit-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: -o-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: -moz-linear-gradient(rgb(28,78,159)0%, #000 80%);
+        background: linear-gradient(rgb(28,78,159)0%, #000 80%);
     }
     .burger-menu .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
