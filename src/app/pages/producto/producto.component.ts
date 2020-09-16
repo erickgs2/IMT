@@ -15,56 +15,29 @@ export class ProductoComponent implements OnInit {
     private _sanitizer: DomSanitizer, private router: Router) { }
   id;
   sub
-  products = [];
+  producto = {};
   productsWithoutCurrent = [];
-  modelTypes = [];
+  product_type = "";
   currentProd={};
+  currentImage=0;
   ;
   ngOnInit(): void {
     window.scroll(0,0);
 
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id']; // (+) converts string 'id' to a number
-      this.restApi.getAllProducts().subscribe((data) => {
-        this.products = [];
-        this.modelTypes = [];
-        for (var i = 0; i < data['Items'].length; i++) {
-          if (data['Items'][i]["product_type"]["S"] == this.id) {
-            this.products.push({
-              "type": data['Items'][i]["product_type"]["S"],
-              "model": data['Items'][i]["product_model"]["S"],
-              "img": this._sanitizer.bypassSecurityTrustUrl(data['Items'][i]["product_img"]["S"]),
-              "desc": data['Items'][i]["product_desc"]["S"],
-              "modelType": data['Items'][i]["product_model_type"]["S"],
-              "name": data['Items'][i]["product_name"]["S"]
-            })
-
-          }
-
-        }
-
-        this.products.forEach((item) => {
-          var validator = this.modelTypes.find(element => element.name == item.modelType);
-          if( validator == null || undefined){
-            this.modelTypes.push(
-              {
-                "name":item.modelType,
-                "prods":this.products.filter(i => i.model != this.currentProd['model'] && item.modelType == i.modelType)
-              }
-            );
-          }
-        })
-
-        this.products = this.products.sort(this.compare)
-        this.currentProd = this.products[0];
-        this.productsWithoutCurrent = this.products.filter(item => item.model != this.currentProd['model'])
-
-
+      this.restApi.getProductByModel(this.id).subscribe((data) => {
+        this.producto = data["Item"];
+        // this.producto["product_img"] = this.producto["product_img"][0]!="h"?this.producto["product_img"].substring(2):this.producto["product_img"]
+        this.product_type = this.producto["product_type"];
+        this.currentImage = this.producto["product_img"][0];
       })
       // In a real app: dispatch action to load the details here.
     });
   }
-
+  changeCurrentImage(index){
+    this.currentImage = index;
+  }
   compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const bandA = a.name.toUpperCase();
@@ -79,15 +52,8 @@ export class ProductoComponent implements OnInit {
     return comparison;
   }
 
-  selectCurrentProd(model) {
-    this.currentProd = this.products.find(element => element.model == model);
-    this.productsWithoutCurrent = this.products.filter(item => item.model != this.currentProd['model'])
-    window.scroll(0,650);
-  }
   goToProductDetails() {
-    this.router.navigate(['/productos']);
-    window.scroll(0,0);
-    this.goToProducto()
+    this.router.navigate(['/productos/'+this.product_type]);
   }
   goToProducto() {
   }

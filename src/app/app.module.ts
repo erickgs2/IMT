@@ -14,6 +14,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -23,7 +26,8 @@ import { ProductoComponent } from './pages/producto/producto.component';
         ContactoComponent,
         NosotrosComponent,
         ProductosComponent,
-        ProductoComponent
+        ProductoComponent,
+        CategoriasComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -34,7 +38,9 @@ import { ProductoComponent } from './pages/producto/producto.component';
         ComponentsModule,
         ExamplesModule
     ],
-    providers: [],
+    providers: [
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

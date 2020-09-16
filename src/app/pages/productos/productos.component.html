@@ -1,89 +1,67 @@
-
-    <div class="page-header page-header-small">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8"
-            style="background-image: url('assets/img/back2.jpg');">
+<div class="page-header page-header-small">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8"
+        style="background-image: url('assets/img/back2.jpg');">
+    </div>
+    <div class="container">
+        <div class="content-center">
+            <!-- <h3 class="">Industria Metalica de Transformación</h3> -->
+            <h1 style="font-size: 40px" class="title">Transforma, maneja y mecaniza tus procesos agrícolas</h1>
+            <!-- <h3 class="">Nuestro sitio se encuentra actualmente en construcción</h3> -->
+            <div class="text-center">
+                <a href="https://www.facebook.com/pages/Industria-Metalica-de-Transformacion-SA-de-CV/981432678604297"
+                    class="btn btn-primary btn-icon btn-round">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <!-- <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+                        <i class="fab fa-google-plus"></i>
+                      </a> -->
+            </div>
         </div>
-        <div class="container">
-            <div class="content-center">
-                <!-- <h3 class="">Industria Metalica de Transformación</h3> -->
-                <h1 class="title" style="font-size: 40px">Transforma, maneja y mecaniza tus procesos agrícolas</h1>
-                <div class="text-center">
-                    <a href="https://www.facebook.com/pages/Industria-Metalica-de-Transformacion-SA-de-CV/981432678604297"
-                        class="btn btn-primary btn-icon btn-round">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <!-- <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-                    <i class="fab fa-google-plus"></i>
-                  </a> -->
+    </div>
+</div>
+<div class="section section-about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-left">
+                <a style="text-decoration: underline; cursor: pointer;" (click)="goToProductDetails()">Categorias<strong>
+                    ></strong></a>
+                <h2 class="title seccionTitleProducts" >{{id}} - <strong style="color:#ee4b08">IMT</strong></h2>
+                <div class="separator separator-primary" style="margin-top: 0px; 
+                margin-left:0px;
+                margin-bottom: -30px;
+                width: 395px;
+                border: solid 2px #ee4b08;"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section section-contact-us text-center" id=¨Contacto¨>
+    <div class="container">
+        <div *ngFor="let MT of modelTypes">
+            <h2 *ngIf="modelTypes.length > 1" class="title" style="font-family:'Moon', sans-serif;
+                font-size: 65px;
+                color: #2c2c2c;
+                font-weight: 700;
+               ">{{MT.name}}</h2>
+            <div class="row">
+                <div *ngFor="let item of products" [ngClass]="{'hidden': (item.modelType != MT.name)}" (click)="selectCurrentProd(item.model)"
+                    style="margin-bottom:30px" class="col-md-4">
+                    <img class="mini-img-prod-desc" style="height: 250px;" [src]="item.img[0]['S']">
+                    <div class="separator separator-primary mini-img-prod-separator" style="margin-top: 0px; 
+                        margin-bottom: 8px;
+                        margin-left:0px;
+                        width: 100%;
+                        border: solid 2px #f04c08;"></div>
+                    <h5 class="title title-prod" style="height: auto; ">{{item.name}}</h5>
+                    <h2 class="title title-prod" style="height: auto; color: #f04c08;">{{item.model}}</h2>
+                    <p>{{item.desc}}</p>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <div class="section section-about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 ml-auto mr-auto text-left">
-                    <h2 class="title seccionTitleProducts" >Productos <strong style="color:#ee4b08">IMT</strong></h2>
-                    <h4 class="title seccionTextProducts" >Nuestros productos y servicios son desarrollados especialmente para el sector agrícola y ganadero, contamos con una alta variedad y precios accesibles.</h4>
-                    <div class="separator separator-primary" style="margin-top: 0px; 
-                    margin-left:0px;
-                    margin-bottom: 90px;
-                    width: 395px;
-                    border: solid 2px #ee4b08;"></div>
-
-                </div>
-            </div>
-
-
-
-
-
-            <div class="row">
-                <div *ngFor="let item of prodTypes" (click)="goToProductDetails(item.name)" style="margin-bottom:30px" class="col-md-4">
-                    <img style="height: 250px;" [src]="item.img">
-                    <div class="separator separator-primary" style="margin-top: 0px; 
-                    margin-bottom: 8px;
-                    margin-left:0px;
-                    width: 60%;
-                    border: solid 2px #f04c08;"></div>
-                    <h2 class="title title-prod" >{{item.name}}</h2>
-                    <!-- <div class="separator separator-primary" style="margin-top: 0px; 
-                    margin-left:0px;
-                    width: 60%;
-                    border: solid 2px #f04c08;"></div> -->
-                    <!-- <p style="font-size: 12px; text-align: justify"><strong>Modelo {{item.model}}:</strong> {{item.desc}}</p> -->
-                </div>
-                <!-- <div class="col-md-3">
-                    <img src="assets/img/re1.png">
-                    <h2 class="title" style="font-family: 'Poppins', sans-serif;
-                    font-size: 20px;
-                    color: black;
-                    font-weight: 900;
-                    margin-bottom: 10px;">REMOLQUES CAMA BAJA 2 EJES</h2>
-                    <div class="separator separator-primary" style="margin-top: 0px; 
-                    margin-left:0px;
-                    width: 100%;
-                    border: solid 2px #f04c08;"></div>
-                    <p style="font-size: 12px; text-align: justify">Modelo 2CBR608B: Cosechador cargador estándar,
-                        reforzado de 4.62 Mts. de largo y 2.10 Mts. de ancho, suspensión tándem acorazada con capacidad
-                        de 6,000 Kg. y muelles de 6 hojas</p>
-                </div> -->
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-
+</div>

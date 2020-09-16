@@ -76,6 +76,10 @@ export class AppComponent implements OnInit {
           })
     }
 
+    goToProductDetails(cat) {
+      this.router.navigate(['/productos', cat]);
+    }
+
         compare(a, b) {
         // Use toUpperCase() to ignore character casing
         const bandA = a.name.toUpperCase();

@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, OnDestroy  } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Router  } from '@angular/router';
 import * as Rellax from 'rellax';
 
 @Component({
@@ -28,7 +29,7 @@ export class InicioComponent implements OnInit, OnDestroy  {
 
   state_icon_primary = true;
 
-  constructor( private renderer : Renderer2, config: NgbAccordionConfig) {
+  constructor(private router: Router, private renderer : Renderer2, config: NgbAccordionConfig) {
       config.closeOthers = true;
       config.type = 'info';
   }
@@ -39,6 +40,10 @@ export class InicioComponent implements OnInit, OnDestroy  {
 
   isDisabled(date: NgbDateStruct, current: {month: number}) {
       return date.month !== current.month;
+  }
+
+  goToContact(){
+    this.router.navigate(['/contacto']);
   }
 
   ngOnInit() {

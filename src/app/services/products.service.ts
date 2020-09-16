@@ -1,5 +1,5 @@
 import { Injectable, NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,5 +12,13 @@ export class ProductsService {
 
   getAllProducts(): Observable<any>{
     return this.http.get('https://i8z1xzz9cf.execute-api.us-east-1.amazonaws.com/Development/get-all-products');
+  }
+  getProductByModel(model): Observable<any>{
+
+    const body = {
+      model:model
+    }
+
+    return this.http.post('https://i8z1xzz9cf.execute-api.us-east-1.amazonaws.com/Development/get-product-by-model', body);
   }
 }

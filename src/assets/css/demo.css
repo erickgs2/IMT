@@ -19,6 +19,21 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+.oppacity{
+    opacity: 0.5;
+}
+
+.links-prods:hover{
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {  
+.oppacity{
+    visibility: hidden;
+} 
+}
+
 
 .model-area-prod-desc {
     position: relative;
