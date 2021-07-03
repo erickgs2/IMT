@@ -8,7 +8,7 @@
             <h1 style="font-size: 40px" class="title">Transforma, maneja y mecaniza tus procesos agrícolas</h1>
             <!-- <h3 class="">Nuestro sitio se encuentra actualmente en construcción</h3> -->
             <div class="text-center">
-                <a href="https://www.facebook.com/pages/Industria-Metalica-de-Transformacion-SA-de-CV/981432678604297"
+                <a href="https://m.facebook.com/Industria-Met%C3%A1lica-de-Transformaci%C3%B3n-108113634679148/"
                     class="btn btn-primary btn-icon btn-round">
                     <i class="fab fa-facebook-square"></i>
                 </a>
@@ -64,7 +64,7 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-bottom: 100px;"> 
                 <div class="col-md-8">
                     <div class="row">
                         <div *ngFor="let img of producto['product_img']" class="col-md-4">
@@ -72,7 +72,44 @@
                             style="box-shadow: none; border-radius:0px;height: auto; width: 100%;">
                         </div>
                        
-                    </div>
+                    </div>  
+                </div>
+            </div>
+            <div *ngIf="specs[0].spec != ''" class="row" style=" width: 100% !important; overflow-x: auto;">
+                <div class="col-md-8" style="margin-top: 80; margin-bottom: 50px;">
+                    <h2 class="title" style="font-family:'Moon', sans-serif;
+                    font-size: 45px;
+                    color: black;
+                    font-weight: 700;
+                    margin-bottom: 10px;">{{product_mode_type}}</h2>
+                    <p style="font-size: 18px; text-align: justify; background-color: #fff;">{{model_type_description}}</p>
+                </div>
+                <div class="col-md-8" style="margin-top: 80;">
+                    <h2 class="title" style="font-family:'Moon', sans-serif;
+                    font-size: 45px;
+                    color: black;
+                    font-weight: 700;
+                    margin-bottom: 10px;">ESPECIFICACIONES</h2>
+                    <table class="table table-hover ">
+                        <thead>
+                          <tr style="color: #f04c08;">
+                            <!-- <th scope="col">#</th> -->
+                            <th style="padding: .75rem 0.15rem .75rem 0.15rem" scope="col">ESPECIFICACIÓN</th>
+                            <th style="padding: .75rem 0.15rem .75rem 0.15rem;text-align: center;" scope="col">UNIDAD</th>
+                            <!-- <th style="padding: .75rem 0.15rem .75rem 0.15rem" scope="col">VALOR</th> -->
+                            <th  *ngFor="let val of specs[0].value" style="padding: .75rem 0.15rem .75rem 0.15rem;text-align: center;" scope="col">{{val.key}} </th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let spec of specs">
+                            <!-- <th scope="row">1</th> -->
+                            <td style="padding: .0.15rem;">{{spec.spec}} </td>
+                            <td style="padding: .0.15rem; text-align: center;">{{spec.unit}} </td>
+                            <td *ngFor="let val of spec.value" style="padding: .0.15rem; text-align: center;">{{val.val}} </td>
+                        </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>

@@ -23,6 +23,11 @@
     opacity: 0.5;
 }
 
+.links-prods:hover{
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {  
 .oppacity{
     visibility: hidden;
