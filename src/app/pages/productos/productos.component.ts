@@ -41,7 +41,7 @@ export class ProductosComponent implements OnInit {
           }
 
         }
-
+        
         this.products.forEach((item) => {
           var validator = this.modelTypes.find(element => element.name == item.modelType);
           if( validator == null || undefined){
@@ -50,11 +50,14 @@ export class ProductosComponent implements OnInit {
                 "name":item.modelType,
                 "prods":this.products.filter(i => item.modelType == i.modelType)
               }
-            );
-          }
-        })
+              );
+            }
+          })
+          this.modelTypes = this.modelTypes.sort((a,b) => (a.name < b.name) ? -1 : ((b.name < a.name) ? 1 : 0))
 
-        this.products = this.products.sort(this.compare)
+          
+        // this.products = this.products.sort(this.compare)
+        this.products = this.products.sort((a,b) => (a.model < b.model) ? 1 : ((b.model < a.model) ? -1 : 0))
         this.currentProd = this.products[0];
 
 
@@ -62,7 +65,22 @@ export class ProductosComponent implements OnInit {
       // In a real app: dispatch action to load the details here.
     });
   }
+  dynamicSort(property) {
+    var sortOrder = 1;
 
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+
+    return function (a,b) {
+        if(sortOrder == -1){
+            return b[property].localeCompare(a[property]);
+        }else{
+            return a[property].localeCompare(b[property]);
+        }        
+    }
+}
   compare(a, b) {
     // Use toUpperCase() to ignore character casing
     const bandA = a.name.toUpperCase();

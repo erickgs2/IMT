@@ -33,16 +33,17 @@ export class ProductoComponent implements OnInit {
         this.producto = data["Item"];
         // this.producto["product_img"] = this.producto["product_img"][0]!="h"?this.producto["product_img"].substring(2):this.producto["product_img"]
         this.specs = this.producto["product_specs"]!=undefined?this.producto["product_specs"]:[{ spec: "", unit: "", value: [{key:'',val:''}] }];
-        console.log(this.specs)
         this.product_type = this.producto["product_type"];
         this.product_mode_type = this.producto["product_model_type"];
         this.currentImage = this.producto["product_img"][0];
+        
+
         switch(this.product_mode_type){
-          case "ACAMADORA":
+          case "ACAMADORA (CON O SIN FERTILIZADORA)":
             this.model_type_description = desc.Acamadora
             break;
-          case "ACOLCHADORA":
-            this.model_type_description = desc.Acolchonadora
+          case "ACOLCHADORAS":
+            this.model_type_description = desc.Acolchadora
             break;
           case "COMEDEROS":
             this.model_type_description = desc.Comederos
@@ -50,10 +51,10 @@ export class ProductoComponent implements OnInit {
           case "CUCHILLA TERRACERA":
             this.model_type_description = desc["Cuchillas Terraceras"]
             break;
-          case "CULTIVADORAS AJUSTABLES":
-            this.model_type_description = "N/A"
+          case "MULTICULTIVADORES AJUSTABLES":
+            this.model_type_description = desc["Multicultivadores"]
             break;
-          case "CULTIVADORAS ROTATIVAS":
+          case "CULTIVADORAS ROTATIVAS DE ARAÑAS Y DISCOS DENTADOS":
             this.model_type_description = desc["Cultivadoras Rotativas de Discos Dentados o arañas"]
             break;
           case "NIVELADORAS HIDRÁULICAS":
@@ -77,10 +78,10 @@ export class ProductoComponent implements OnInit {
           case "REMOLQUES GANADEROS":
             this.model_type_description = desc["Remolques Ganaderos"]
             break;
-          case "ZANJEADORES ":
+          case "ZANJEADOR FIJO":
             this.model_type_description = desc["Zanjeadores Fijos"]
             break;
-            case "ZANJEADORES TELESCOPICO":
+            case "ZANJEADORES TELESCÓPICOS":
               this.model_type_description = desc["Zanjeadores Telescópicos"]
             break;
         }
